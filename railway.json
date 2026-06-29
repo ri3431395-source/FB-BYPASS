@@ -1,12 +1,11 @@
 {
-  "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "pip install -r requirements.txt && apt-get update && apt-get install -y ffmpeg exiftool"
-  },
-  "deploy": {
-    "startCommand": "python telegram_bypass_bot.py",
-    "healthcheckPath": "/",
-    "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10
-  }
+    "build": {
+        "builder": "NIXPACKS",
+        "buildCommand": "pip install -r requirements.txt && apt-get update && apt-get install -y ffmpeg exiftool"
+    },
+    "deploy": {
+        "startCommand": "python telegram_bypass_bot.py",
+        "restartPolicyType": "ON_FAILURE",
+        "restartPolicyMaxRetries": 10
+    }
 }
